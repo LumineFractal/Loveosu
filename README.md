@@ -9,7 +9,9 @@ It uses [osu!api v2](https://osu.ppy.sh/docs/index.html)
 
 Inspired by [osu!profile by Entrivax](https://github.com/Entrivax/osu-profile)
 
-# Installation
+Made using [Avalonia](https://github.com/AvaloniaUI/Avalonia)
+
+# Installation (Windows)
 
 Extract loveosu.zip whenever you want, open by clicking Loveosu.exe  
 You need to set some settings first.  
