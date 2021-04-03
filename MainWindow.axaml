@@ -1,0 +1,1384 @@
+<Window  xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:Loveosu.Views"
+        mc:Ignorable="d"
+        x:Class="Loveosu.MainWindow"
+        Icon="/assets/Loveosu.ico"
+        Title="Loveosu"
+        HorizontalContentAlignment="Center"
+        VerticalContentAlignment="Top"
+        SizeToContent="WidthAndHeight"
+        CanResize="False">
+  <Grid Margin="1">
+    <TabControl>
+      <TabItem Name="TabUser" Header="User" FontSize="24">
+        <Canvas Name="UserCanvas" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top">
+          <TextBlock Name="AlertNoData"
+                     Text="Set user ID and API data in settings first!"
+                     IsVisible="True"
+                     Canvas.Left="10" Canvas.Top="20"/>
+          <TextBlock Text="Ranked Score"
+                  Name="RankedScoreTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="20"/>
+          <TextBlock Text="Total Score"
+                  Name="TotalScoreTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="60"/>
+          <TextBlock Text="Level"
+                  Name="LevelTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="100"/>
+          <TextBlock Text="pp"
+                  Name="ppTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="140"/>
+          <TextBlock Text="Global Rank"
+                  Name="GlobalRankTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="180"/>
+          <TextBlock Text="Country Rank"
+                  Name="CountryRankTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="220"/>
+          <TextBlock Text="Hit Accuracy"
+                  Name="HitAccuracyTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="260"/>
+          <TextBlock Text="Play Count"
+                  Name="PlayCountTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="300"/>
+          <TextBlock Text="Current Month Play Count"
+                  Name="CurrentMonthPlaycountTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="300"/>
+          <TextBlock Text="Play Time"
+                  Name="PlayTimeTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="340"/>
+          <TextBlock Text="Total Hits"
+                  Name="TotalHitsTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="380"/>
+          <TextBlock Text="Replays Watched"
+                  Name="ReplaysWatchedTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="420"/>
+          <TextBlock Text="First Places Count"
+                  Name="FirstPlacesCountTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="420"/>
+          <TextBlock Text="Silver SS Count"
+                  Name="SSHCountTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="460"/>
+          <TextBlock Text="Golden SS Count"
+                  Name="SSCountTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="500"/>
+          <TextBlock Text="Silver S Count"
+                  Name="SHCountTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="540"/>
+          <TextBlock Text="Golden S Count"
+                  Name="SCountTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="580"/>
+          <TextBlock Text="A Count"
+                  Name="ACountTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="620"/>
+          <TextBlock Text="Total SS Count"
+                  Name="SSCombinedCountTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="460"/>
+          <TextBlock Text="Total S Count"
+                  Name="SCombinedCountTextBlock"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="10" Canvas.Top="500"/>
+          <TextBlock Name="RankedScore"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="20"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="TotalScore"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="60"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="Level"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="100"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="pp"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="140"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="GlobalRank"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="180"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="CountryRank"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="220"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="HitAccuracy"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="260"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="PlayCount"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="300"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="CurrentMonthPlaycount"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="300"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="PlayTime"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="340"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="TotalHits"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="380"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="ReplaysWatched"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="420"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="FirstPlacesCount"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="420"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SSHCount"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="460"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SSCount"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="500"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SHCount"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="540"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SCount"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="580"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="ACount"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="620"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SSCombinedCount"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="460"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SCombinedCount"
+                  IsVisible="False"
+                  Foreground="WhiteSmoke"
+                  FontSize="20"
+                  Canvas.Left="200" Canvas.Top="500"
+                  Width="165"
+                  TextAlignment="Right"/>
+          <TextBlock Name="RankedScoreDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="20"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="TotalScoreDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="60"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="LevelDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="100"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="ppDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="140"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="GlobalRankDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="180"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="CountryRankDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="220"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="HitAccuracyDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="260"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="PlayCountDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="300"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="CurrentMonthPlaycountDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="300"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="PlayTimeDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="340"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="TotalHitsDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="380"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="ReplaysWatchedDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="420"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="FirstPlacesCountDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="420"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SSHCountDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="460"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SSCountDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="500"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SHCountDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="540"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SCountDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="580"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="ACountDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="620"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SSCombinedCountDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="460"
+                  Width="160"
+                  TextAlignment="Right"/>
+          <TextBlock Name="SCombinedCountDiff"
+                  IsVisible="False"
+                  Foreground="LightGreen"
+                  FontSize="20"
+                  Canvas.Left="410" Canvas.Top="500"
+                  Width="160"
+                  TextAlignment="Right"/>
+        </Canvas>
+      </TabItem>
+      <TabItem Name="Settings" Header="Settings" FontSize="24">
+        <Canvas HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top">
+          <TextBlock Text="User ID to spy on:"
+                     Canvas.Left="10" Canvas.Top="15"
+                     FontSize="18"
+                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          <TextBox Name="UserID"
+                   Canvas.Left="190" Canvas.Top="8"
+                   FontSize="18"
+                   TextWrapping="Wrap"
+                   Width="400"
+                   HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+          <TextBlock Text="Client ID:"
+                     Canvas.Left="10" Canvas.Top="57"
+                     FontSize="18"
+                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          <TextBox Name="ClientID"
+                   Canvas.Left="190" Canvas.Top="50"
+                   FontSize="18"
+                   TextWrapping="Wrap"
+                   Width="400"
+                   HorizontalAlignment="Left"  VerticalAlignment="Center"/>
+          <TextBlock Text="Client Secret:"
+                     Canvas.Left="10" Canvas.Top="99"
+                     FontSize="18"
+                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          <TextBox Name="ClientSecret"
+                   PasswordChar="*"
+                   Canvas.Left="190" Canvas.Top="92"
+                   FontSize="18"
+                   TextWrapping="Wrap"
+                   Width="400"
+                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          <TextBlock Text="Update every                               seconds"
+                     Canvas.Left="10" Canvas.Top="152"
+                     FontSize="18"
+                     HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          <TextBox Name="UpdateInterval"
+                   Text="20"
+                   Canvas.Left="190" Canvas.Top="144"
+                   FontSize="18"
+                   TextWrapping="Wrap"
+                   Width="80"
+                   HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          <TextBlock Text="Saved!"
+                 Name="SavedTextBlock"
+                 IsVisible="False"
+                 Foreground="LightGreen"
+                 FontSize="20"
+                 Canvas.Left="180" Canvas.Top="530"/>
+          <TextBlock Text="Wait..."
+                 Name="WaitTextBlock"
+                 IsVisible="False"
+                 Foreground="LightCoral"
+                 FontSize="20"
+                 Canvas.Left="70" Canvas.Top="530"/>
+          <TextBlock Text="Error, check key or username"
+                 Name="ErrorTextBlock"
+                 IsVisible="False"
+                 Foreground="Red"
+                 FontSize="20"
+                 Canvas.Left="0" Canvas.Top="530"/>
+          <Button Content="Save"
+                  Click="OnSaveButtonClick"
+                  FontSize="20"
+                  Canvas.Left="450" Canvas.Top="520"
+                  Height="60"
+                  Width="120"
+                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+          <TextBlock Text="Loveosu v1.0 made by Piro13"
+                 Name="Credits"
+                 IsVisible="True"
+                 Foreground="WhiteSmoke"
+                 FontSize="13"
+                 Canvas.Left="450" Canvas.Top="640"/>
+        </Canvas>
+      </TabItem>
+      <TabItem Name="TabCustomization" Header="Customization" FontSize="24">
+        <Canvas Name="Canvas" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top">
+          <TextBlock Text="Stat. name"
+                  Foreground="WhiteSmoke"
+                  FontSize="22"
+                  Canvas.Left="10" Canvas.Top="4"/>
+          <TextBlock Text="Enabled? (max. 16)"
+                  Foreground="WhiteSmoke"
+                  FontSize="22"
+                  Canvas.Left="200" Canvas.Top="4"/>
+          <TextBlock Text="Order from top"
+                  Foreground="WhiteSmoke"
+                  FontSize="22"
+                  Canvas.Left="414" Canvas.Top="4"/>
+          <Line Stroke="#b0b0b0" StartPoint="10, 35" EndPoint="355, 35" StrokeThickness="3"/>
+          <TextBlock Text="Ranked Score"
+                  Name="RankedScoreCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="40"/>
+          <Line Stroke="#787878" StartPoint="10, 65" EndPoint="355, 65" StrokeThickness="2"/>
+          <RadioButton Name="RankedScoreCustomYes"
+                       GroupName="RankedScoreCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="35"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="RankedScoreCustomNo"
+                       GroupName="RankedScoreCustom"
+                       Canvas.Left="300" Canvas.Top="35"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="RankedScoreCustomUp"
+                  Click="OnRankedScoreCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="35">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="RankedScoreCustomDown"
+                  Click="OnRankedScoreCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="35">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Total Score"
+                  Name="TotalScoreCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="70"/>
+          <Line Stroke="#787878" StartPoint="10, 95" EndPoint="355, 95" StrokeThickness="2"/>
+          <RadioButton Name="TotalScoreCustomYes"
+                       GroupName="TotalScoreCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="65"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="TotalScoreCustomNo"
+                       GroupName="TotalScoreCustom"
+                       Canvas.Left="300" Canvas.Top="65"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="TotalScoreCustomUp"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Click="OnTotalScoreCustomUpClick"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="65">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="TotalScoreCustomDown"
+                  Click="OnTotalScoreCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="65">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Level"
+                  Name="LevelCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="100"/>
+          <Line Stroke="#787878" StartPoint="10, 125" EndPoint="355, 125" StrokeThickness="2"/>
+          <RadioButton Name="LevelCustomYes"
+                       GroupName="LevelCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="95"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="LevelCustomNo"
+                       GroupName="LevelCustom"
+                       Canvas.Left="300" Canvas.Top="95"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="LevelCustomUp"
+                  Click="OnLevelCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="95">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="LevelCustomDown"
+                  Click="OnLevelCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="95">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="pp"
+                  Name="ppCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="130"/>
+          <Line Stroke="#787878" StartPoint="10, 155" EndPoint="355, 155" StrokeThickness="2"/>
+          <RadioButton Name="ppCustomYes"
+                       GroupName="ppCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="125"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="ppCustomNo"
+                       GroupName="ppCustom"
+                       Canvas.Left="300" Canvas.Top="125"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="ppCustomUp"
+                  Click="OnppCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="125">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="ppCustomDown"
+                  Click="OnppCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="125">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Global Rank"
+                  Name="GlobalRankCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="160"/>
+          <Line Stroke="#787878" StartPoint="10, 185" EndPoint="355, 185" StrokeThickness="2"/>
+          <RadioButton Name="GlobalRankCustomYes"
+                       GroupName="GlobalRankCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="155"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="GlobalRankCustomNo"
+                       GroupName="GlobalRankCustom"
+                       Canvas.Left="300" Canvas.Top="155"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="GlobalRankCustomUp"
+                  Click="OnGlobalRankCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="155">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="GlobalRankCustomDown"
+                  Click="OnGlobalRankCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="155">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Country Rank"
+                  Name="CountryRankCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="190"/>
+          <Line Stroke="#787878" StartPoint="10, 215" EndPoint="355, 215" StrokeThickness="2"/>
+          <RadioButton Name="CountryRankCustomYes"
+                       GroupName="CountryRankCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="185"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="CountryRankCustomNo"
+                       GroupName="CountryRankCustom"
+                       Canvas.Left="300" Canvas.Top="185"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="CountryRankCustomUp"
+                  Click="OnCountryRankCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="185">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="CountryRankCustomDown"
+                  Click="OnCountryRankCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="185">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Hit Accuracy"
+                  Name="HitAccuracyCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="220"/>
+          <Line Stroke="#787878" StartPoint="10, 245" EndPoint="355, 245" StrokeThickness="2"/>
+          <RadioButton Name="HitAccuracyCustomYes"
+                       GroupName="HitAccuracyCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="215"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="HitAccuracyCustomNo"
+                       GroupName="HitAccuracyCustom"
+                       Canvas.Left="300" Canvas.Top="215"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="HitAccuracyCustomUp"
+                  Click="OnHitAccuracyCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="215">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="HitAccuracyCustomDown"
+                  Click="OnHitAccuracyCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="215">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Play Count"
+                  Name="PlayCountCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="250"/>
+          <Line Stroke="#787878" StartPoint="10, 275" EndPoint="355, 275" StrokeThickness="2"/>
+          <RadioButton Name="PlayCountCustomYes"
+                       GroupName="PlayCountCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="245"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="PlayCountCustomNo"
+                       GroupName="PlayCountCustom"
+                       Canvas.Left="300" Canvas.Top="245"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="PlayCountCustomUp"
+                  Click="OnPlayCountCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="245">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="PlayCountCustomDown"
+                  Click="OnPlayCountCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="245">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Cur. Mo. Play Count"
+                  Name="CurrentMonthPlaycountCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="280"/>
+          <Line Stroke="#787878" StartPoint="10, 305" EndPoint="355, 305" StrokeThickness="2"/>
+          <RadioButton Name="CurrentMonthPlaycountCustomYes"
+                       GroupName="CurrentMonthPlaycountCustom"
+                       Canvas.Left="200" Canvas.Top="275"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="CurrentMonthPlaycountCustomNo"
+                       GroupName="CurrentMonthPlaycountCustom"
+                       IsChecked="True"
+                       Canvas.Left="300" Canvas.Top="275"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="CurrentMonthPlaycountCustomUp"
+                  Click="OnCurrentMonthPlaycountCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="275">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="CurrentMonthPlaycountCustomDown"
+                  Click="OnCurrentMonthPlaycountCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="275">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Play Time"
+                  Name="PlayTimeCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="310"/>
+          <Line Stroke="#787878" StartPoint="10, 335" EndPoint="355, 335" StrokeThickness="2"/>
+          <RadioButton Name="PlayTimeCustomYes"
+                       GroupName="PlayTimeCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="305"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="PlayTimeCustomNo"
+                       GroupName="PlayTimeCustom"
+                       Canvas.Left="300" Canvas.Top="305"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="PlayTimeCustomUp"
+                  Click="OnPlayTimeCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="305">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="PlayTimeCustomDown"
+                  Click="OnPlayTimeCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="305">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Total Hits"
+                  Name="TotalHitsCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="340"/>
+          <Line Stroke="#787878" StartPoint="10, 365" EndPoint="355, 365" StrokeThickness="2"/>
+          <RadioButton Name="TotalHitsCustomYes"
+                       GroupName="TotalHitsCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="335"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="TotalHitsCustomNo"
+                       GroupName="TotalHitsCustom"
+                       Canvas.Left="300" Canvas.Top="335"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="TotalHitsCustomUp"
+                  Click="OnTotalHitsCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="335">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="TotalHitsCustomDown"
+                  Click="OnTotalHitsCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="335">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Replays Watched"
+                  Name="ReplaysWatchedCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="370"/>
+          <Line Stroke="#787878" StartPoint="10, 395" EndPoint="355, 395" StrokeThickness="2"/>
+          <RadioButton Name="ReplaysWatchedCustomYes"
+                       GroupName="ReplaysWatchedCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="365"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="ReplaysWatchedCustomNo"
+                       GroupName="ReplaysWatchedCustom"
+                       Canvas.Left="300" Canvas.Top="365"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="ReplaysWatchedCustomUp"
+                  Click="OnReplaysWatchedCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="365">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="ReplaysWatchedCustomDown"
+                  Click="OnReplaysWatchedCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="365">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="First Places Count"
+                  Name="FirstPlacesCountCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="400"/>
+          <Line Stroke="#787878" StartPoint="10, 425" EndPoint="355, 425" StrokeThickness="2"/>
+          <RadioButton Name="FirstPlacesCountCustomYes"
+                       GroupName="FirstPlacesCountCustom"
+                       Canvas.Left="200" Canvas.Top="395"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="FirstPlacesCountCustomNo"
+                       GroupName="FirstPlacesCountCustom"
+                       IsChecked="True"
+                       Canvas.Left="300" Canvas.Top="395"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="FirstPlacesCountCustomUp"
+                  Click="OnFirstPlacesCountCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="395">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="FirstPlacesCountCustomDown"
+                  Click="OnFirstPlacesCountCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="395">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Silver SS Count"
+                  Name="SSHCountCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="430"/>
+          <Line Stroke="#787878" StartPoint="10, 455" EndPoint="355, 455" StrokeThickness="2"/>
+          <RadioButton Name="SSHCountCustomYes"
+                       GroupName="SSHCountCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="425"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="SSHCountCustomNo"
+                       GroupName="SSHCountCustom"
+                       Canvas.Left="300" Canvas.Top="425"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="SSHCountCustomUp"
+                  Click="OnSSHCountCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="425">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="SSHCountCustomDown"
+                  Click="OnSSHCountCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="425">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Golden SS Count"
+                  Name="SSCountCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="460"/>
+          <Line Stroke="#787878" StartPoint="10, 485" EndPoint="355, 485" StrokeThickness="2"/>
+          <RadioButton Name="SSCountCustomYes"
+                       GroupName="SSCountCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="455"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="SSCountCustomNo"
+                       GroupName="SSCountCustom"
+                       Canvas.Left="300" Canvas.Top="455"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="SSCountCustomUp"
+                  Click="OnSSCountCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="455">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="SSCountCustomDown"
+                  Click="OnSSCountCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="455">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Silver S Count"
+                  Name="SHCountCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="490"/>
+          <Line Stroke="#787878" StartPoint="10, 515" EndPoint="355, 515" StrokeThickness="2"/>
+          <RadioButton Name="SHCountCustomYes"
+                       GroupName="SHCountCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="485"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="SHCountCustomNo"
+                       GroupName="SHCountCustom"
+                       Canvas.Left="300" Canvas.Top="485"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="SHCountCustomUp"
+                  Click="OnSHCountCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="485">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="SHCountCustomDown"
+                  Click="OnSHCountCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="485">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Golden S Count"
+                  Name="SCountCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="520"/>
+          <Line Stroke="#787878" StartPoint="10, 545" EndPoint="355, 545" StrokeThickness="2"/>
+          <RadioButton Name="SCountCustomYes"
+                       GroupName="SCountCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="515"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="SCountCustomNo"
+                       GroupName="SCountCustom"
+                       Canvas.Left="300" Canvas.Top="515"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="SCountCustomUp"
+                  Click="OnSCountCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="515">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="SCountCustomDown"
+                  Click="OnSCountCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="515">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="A Count"
+                  Name="ACountCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="550"/>
+          <Line Stroke="#787878" StartPoint="10, 575" EndPoint="355, 575" StrokeThickness="2"/>
+          <RadioButton Name="ACountCustomYes"
+                       GroupName="ACountCustom"
+                       IsChecked="True"
+                       Canvas.Left="200" Canvas.Top="545"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="ACountCustomNo"
+                       GroupName="ACountCustom"
+                       Canvas.Left="300" Canvas.Top="545"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="ACountCustomUp"
+                  Click="OnACountCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="545">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="ACountCustomDown"
+                  Click="OnACountCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="545">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Total SS Count"
+                  Name="SSCombinedCountCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="580"/>
+          <Line Stroke="#787878" StartPoint="10, 605" EndPoint="355, 605" StrokeThickness="2"/>
+          <RadioButton Name="SSCombinedCountCustomYes"
+                       GroupName="SSCombinedCountCustom"
+                       Canvas.Left="200" Canvas.Top="575"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="SSCombinedCountCustomNo"
+                       GroupName="SSCombinedCountCustom"
+                       IsChecked="True"
+                       Canvas.Left="300" Canvas.Top="575"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="SSCombinedCountCustomUp"
+                  Click="OnSSCombinedCountCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="575">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="SSCombinedCountCustomDown"
+                  Click="OnSSCombinedCountCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="575">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <TextBlock Text="Total S Count"
+                  Name="SCombinedCountCustom"
+                  Foreground="WhiteSmoke"
+                  FontSize="18"
+                  Canvas.Left="10" Canvas.Top="610"/>
+          <RadioButton Name="SCombinedCountCustomYes"
+                       GroupName="SCombinedCountCustom"
+                       Canvas.Left="200" Canvas.Top="605"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">Yes</RadioButton>
+          <RadioButton Name="SCombinedCountCustomNo"
+                       GroupName="SCombinedCountCustom"
+                       IsChecked="True"
+                       Canvas.Left="300" Canvas.Top="605"
+                       FontSize="18"
+                       HorizontalAlignment="Left" VerticalAlignment="Center">No</RadioButton>
+          <Button Name="SCombinedCountCustomUp"
+                  Click="OnSCombinedCountCustomUpClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="370" Canvas.Top="605">
+            <Path Fill="White"
+                  Data="M 0 10 L 20 10 L 10 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="SCombinedCountCustomDown"
+                  Click="OnSCombinedCountCustomDownClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="100"
+                  Height="30"
+                  Canvas.Left="470" Canvas.Top="605">
+            <Path Fill="White" 
+                  Data="M 0 0 L 10 10 L 20 0 Z"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+          </Button>
+          <Button Name="SaveCustomization"
+                  Click="OnSaveCustomClick"
+                  Background="#66000000"
+                  BorderBrush="White"
+                  Width="35"
+                  Height="600"
+                  Canvas.Left="585" Canvas.Top="35">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="17">S A V E  CUS T OM I Z A T I ON</TextBlock>
+          </Button>
+        
+      </Canvas>
+      </TabItem>
+    </TabControl>
+  </Grid>
+
+  <Window.Styles>
+    <Style Selector="TabControl">
+      <Setter Property="Background" Value="#FF393939"/>
+      <Setter Property="Height" Value="720"/>
+      <Setter Property="Width" Value="650"/>
+      <Setter Property="FontSize" Value="20"/>
+    </Style>
+
+    <Style Selector="TabControl WrapPanel">
+      <Setter Property="Background" Value="DarkSlateBlue"/>
+    </Style>
+
+    <Style Selector="TabItem">
+      <Setter Property="VerticalAlignment" Value="Center"/>
+      <Setter Property="Margin" Value="0 0 0 0"/>
+      <Setter Property="Padding" Value="10 0"/>
+      <Setter Property="Height" Value="60"/>
+    </Style>
+
+
+    <Style Selector="TabItem:focus /template/ ContentPresenter#PART_ContentPresenter">
+      <Setter Property="Background" Value="#FF480D8B"/>
+      <Setter Property="BorderBrush" Value="#FF480D8B"/>
+      <Setter Property="BorderThickness" Value="16, 16, 16, 16"/>
+    </Style>
+
+    <Style Selector="TabItem:selected">
+      <Setter Property="Background" Value="#FF480D8B"/>
+      <Setter Property="Margin" Value="0 0 0 0"/>
+      <Setter Property="Padding" Value="10 0"/>
+    </Style>
+
+  </Window.Styles>
+</Window >
