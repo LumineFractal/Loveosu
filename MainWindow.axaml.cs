@@ -160,8 +160,11 @@ namespace Loveosu
         private async Task TimerTickAsync()
         {
             User? user = await RunAPIRequest(UserID, ClientID, ClientSecret);
-            UpdateValues(user);
-            UpdateDiffValues(user);
+            if (user != null)
+            {
+                UpdateValues(user);
+                UpdateDiffValues(user);
+            }
         }
 
         public async void OnSaveButtonClick(object sender, RoutedEventArgs args)
@@ -224,8 +227,15 @@ namespace Loveosu
 
                 var jsonStringUser = response.Content.ReadAsStringAsync();
                 User? user = null;
-                user = JsonConvert.DeserializeObject<User>(jsonStringUser.Result);
-
+                try
+                {
+                    user = JsonConvert.DeserializeObject<User>(jsonStringUser.Result);
+                }
+                catch(Exception e)
+                {
+                    System.Diagnostics.Debug.WriteLine("Error during deserialization of API response");
+                    return null;
+                }
                 return user;
             }
             else
